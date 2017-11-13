@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="main" nsURI="http://www.example.org/main" nsPrefix="main">
+  <eClassifiers xsi:type="ecore:EClass" name="Configuration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="#//Component" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" upperBound="-1"
+        eType="#//Connector" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Connector"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IInterface" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceComponent" eSuperTypes="#//IInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
+        eType="#//Service" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceConnector" eSuperTypes="#//IInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" upperBound="-1" eType="#//Role"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceConfiguration" eSuperTypes="#//IInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" upperBound="-1" eType="#//Port"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ILink" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attachment" eSuperTypes="#//ILink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Binding" eSuperTypes="#//ILink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Service"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Port"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Role"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Glue"/>
+</ecore:EPackage>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/CCS_model/src-gen" creationIcons="false" editDirectory="/CCS_model.edit/src-gen"
+    editorDirectory="/CCS_model.editor/src-gen" modelPluginID="CCS_model" modelName="Main"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>main.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Main" basePackage="ccs_model" disposableProviderFactory="true"
+      ecorePackage="main.ecore#/">
+    <genClasses ecoreClass="main.ecore#//Configuration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/connectors"/>
+    </genClasses>
+    <genClasses ecoreClass="main.ecore#//Component"/>
+    <genClasses ecoreClass="main.ecore#//Connector"/>
+    <genClasses ecoreClass="main.ecore#//IInterface"/>
+    <genClasses ecoreClass="main.ecore#//InterfaceComponent">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceComponent/service"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceComponent/port"/>
+    </genClasses>
+    <genClasses ecoreClass="main.ecore#//InterfaceConnector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceConnector/role"/>
+    </genClasses>
+    <genClasses ecoreClass="main.ecore#//InterfaceConfiguration">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceConfiguration/port"/>
+    </genClasses>
+    <genClasses ecoreClass="main.ecore#//ILink"/>
+    <genClasses ecoreClass="main.ecore#//Attachment"/>
+    <genClasses ecoreClass="main.ecore#//Binding"/>
+    <genClasses ecoreClass="main.ecore#//Service"/>
+    <genClasses ecoreClass="main.ecore#//Port"/>
+    <genClasses ecoreClass="main.ecore#//Role"/>
+    <genClasses ecoreClass="main.ecore#//Glue"/>
+  </genPackages>
+</genmodel:GenModel>
