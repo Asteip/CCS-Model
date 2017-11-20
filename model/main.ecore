@@ -16,10 +16,14 @@
         eType="#//InterfaceComponent" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="provided" lowerBound="1"
         eType="#//InterfaceComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prop" upperBound="-1" eType="#//IProperty"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="constraints" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EEList"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Connector" eSuperTypes="#//GeneralConnector">
     <eStructuralFeatures xsi:type="ecore:EReference" name="glue" lowerBound="1" eType="#//Glue"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//TypeConnector"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IInterface" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceComponent" eSuperTypes="#//IInterface">
@@ -57,10 +61,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="required" lowerBound="1"
         eType="#//InterfaceConnector" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="NewDataType1" instanceTypeName="newDataType1"/>
   <eClassifiers xsi:type="ecore:EClass" name="IPort" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortConfiguration" eSuperTypes="#//IPort"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortComponent" eSuperTypes="#//IPort"/>
   <eClassifiers xsi:type="ecore:EClass" name="GeneralComponent" abstract="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="GeneralConnector" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IProperty" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Functional" eSuperTypes="#//IProperty"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Nonfunctional" eSuperTypes="#//IProperty"/>
+  <eClassifiers xsi:type="ecore:EDataType" name="TypeConnector" instanceTypeName="TypeConnector"/>
 </ecore:EPackage>

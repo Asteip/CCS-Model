@@ -10,7 +10,7 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Main" basePackage="ccs_model" disposableProviderFactory="true"
       ecorePackage="main.ecore#/">
-    <genDataTypes ecoreDataType="main.ecore#//NewDataType1"/>
+    <genDataTypes ecoreDataType="main.ecore#//TypeConnector"/>
     <genClasses ecoreClass="main.ecore#//Configuration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/connectors"/>
@@ -20,9 +20,12 @@
     <genClasses ecoreClass="main.ecore#//Component">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/required"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/provided"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/prop"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute main.ecore#//Component/constraints"/>
     </genClasses>
     <genClasses ecoreClass="main.ecore#//Connector">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Connector/glue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute main.ecore#//Connector/type"/>
     </genClasses>
     <genClasses ecoreClass="main.ecore#//IInterface"/>
     <genClasses ecoreClass="main.ecore#//InterfaceComponent">
@@ -55,5 +58,8 @@
     <genClasses ecoreClass="main.ecore#//PortComponent"/>
     <genClasses image="false" ecoreClass="main.ecore#//GeneralComponent"/>
     <genClasses image="false" ecoreClass="main.ecore#//GeneralConnector"/>
+    <genClasses image="false" ecoreClass="main.ecore#//IProperty"/>
+    <genClasses ecoreClass="main.ecore#//Functional"/>
+    <genClasses ecoreClass="main.ecore#//Nonfunctional"/>
   </genPackages>
 </genmodel:GenModel>
