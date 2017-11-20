@@ -10,12 +10,20 @@
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Main" basePackage="ccs_model" disposableProviderFactory="true"
       ecorePackage="main.ecore#/">
+    <genDataTypes ecoreDataType="main.ecore#//NewDataType1"/>
     <genClasses ecoreClass="main.ecore#//Configuration">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/connectors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/interface"/>
     </genClasses>
-    <genClasses ecoreClass="main.ecore#//Component"/>
-    <genClasses ecoreClass="main.ecore#//Connector"/>
+    <genClasses ecoreClass="main.ecore#//Component">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/required"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/provided"/>
+    </genClasses>
+    <genClasses ecoreClass="main.ecore#//Connector">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Connector/glue"/>
+    </genClasses>
     <genClasses ecoreClass="main.ecore#//IInterface"/>
     <genClasses ecoreClass="main.ecore#//InterfaceComponent">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceComponent/service"/>
@@ -28,11 +36,20 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceConfiguration/port"/>
     </genClasses>
     <genClasses ecoreClass="main.ecore#//ILink"/>
-    <genClasses ecoreClass="main.ecore#//Attachment"/>
-    <genClasses ecoreClass="main.ecore#//Binding"/>
+    <genClasses ecoreClass="main.ecore#//Attachment">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Attachment/port"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Attachment/role"/>
+    </genClasses>
+    <genClasses ecoreClass="main.ecore#//Binding">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Binding/from"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Binding/to"/>
+    </genClasses>
     <genClasses ecoreClass="main.ecore#//Service"/>
     <genClasses ecoreClass="main.ecore#//Port"/>
     <genClasses ecoreClass="main.ecore#//Role"/>
-    <genClasses ecoreClass="main.ecore#//Glue"/>
+    <genClasses ecoreClass="main.ecore#//Glue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Glue/provided"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Glue/required"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -6,9 +6,21 @@
         eType="#//Component" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="connectors" upperBound="-1"
         eType="#//Connector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//ILink" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
+        eType="#//InterfaceConfiguration" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Component"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Connector"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="required" lowerBound="1"
+        eType="#//InterfaceComponent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="provided" lowerBound="1"
+        eType="#//InterfaceComponent" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Connector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="glue" lowerBound="1" eType="#//Glue"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IInterface" interface="true"/>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceComponent" eSuperTypes="#//IInterface">
     <eStructuralFeatures xsi:type="ecore:EReference" name="service" upperBound="-1"
@@ -25,10 +37,26 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ILink" interface="true"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Attachment" eSuperTypes="#//ILink"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Binding" eSuperTypes="#//ILink"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Attachment" eSuperTypes="#//ILink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="port" lowerBound="1" eType="#//Port"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="role" lowerBound="1" eType="#//Role"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Binding" eSuperTypes="#//ILink">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="from" lowerBound="1" eType="#//Port"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="to" lowerBound="1" eType="#//Port"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Service"/>
   <eClassifiers xsi:type="ecore:EClass" name="Port"/>
   <eClassifiers xsi:type="ecore:EClass" name="Role"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Glue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Glue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="provided" lowerBound="1"
+        eType="#//InterfaceConnector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="required" lowerBound="1"
+        eType="#//InterfaceConnector" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="NewDataType1" instanceTypeName="newDataType1"/>
 </ecore:EPackage>
