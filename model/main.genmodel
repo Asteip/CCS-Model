@@ -15,51 +15,60 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/components"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/connectors"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/links"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/required"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Configuration/provided"/>
     </genClasses>
     <genClasses ecoreClass="main.ecore#//Component">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/required"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/provided"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/prop"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute main.ecore#//Component/constraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/required"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Component/provided"/>
     </genClasses>
     <genClasses ecoreClass="main.ecore#//Connector">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Connector/glue"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute main.ecore#//Connector/type"/>
     </genClasses>
-    <genClasses ecoreClass="main.ecore#//IInterface"/>
-    <genClasses ecoreClass="main.ecore#//InterfaceComponent">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceComponent/service"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceComponent/ports"/>
-    </genClasses>
-    <genClasses ecoreClass="main.ecore#//InterfaceConnector">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceConnector/role"/>
-    </genClasses>
-    <genClasses ecoreClass="main.ecore#//InterfaceConfiguration">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//InterfaceConfiguration/ports"/>
-    </genClasses>
+    <genClasses image="false" ecoreClass="main.ecore#//InterfaceComponentProvided"/>
+    <genClasses image="false" ecoreClass="main.ecore#//InterfaceConnectorRequired"/>
+    <genClasses image="false" ecoreClass="main.ecore#//InterfaceConfigurationRequired"/>
     <genClasses ecoreClass="main.ecore#//ILink"/>
-    <genClasses ecoreClass="main.ecore#//Attachment">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Attachment/role"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Attachment/port"/>
+    <genClasses ecoreClass="main.ecore#//AttachmentRToP">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//AttachmentRToP/portcomponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//AttachmentRToP/roleprovided"/>
     </genClasses>
-    <genClasses ecoreClass="main.ecore#//Binding">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Binding/portComponent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Binding/portConfiguration"/>
+    <genClasses ecoreClass="main.ecore#//BindingRequired">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//BindingRequired/portConfiguration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//BindingRequired/portComponent"/>
     </genClasses>
-    <genClasses ecoreClass="main.ecore#//Service"/>
-    <genClasses ecoreClass="main.ecore#//Role"/>
+    <genClasses ecoreClass="main.ecore#//ServiceComponentProvided"/>
+    <genClasses ecoreClass="main.ecore#//RoleRequired"/>
     <genClasses ecoreClass="main.ecore#//Glue">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Glue/provided"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//Glue/required"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="main.ecore#//IPort"/>
-    <genClasses ecoreClass="main.ecore#//PortConfiguration"/>
-    <genClasses ecoreClass="main.ecore#//PortComponent"/>
+    <genClasses ecoreClass="main.ecore#//PortConfigurationRequired"/>
     <genClasses image="false" ecoreClass="main.ecore#//GeneralComponent"/>
     <genClasses image="false" ecoreClass="main.ecore#//GeneralConnector"/>
     <genClasses image="false" ecoreClass="main.ecore#//IProperty"/>
     <genClasses ecoreClass="main.ecore#//Functional"/>
     <genClasses ecoreClass="main.ecore#//Nonfunctional"/>
+    <genClasses image="false" ecoreClass="main.ecore#//InterfaceComponentRequired"/>
+    <genClasses image="false" ecoreClass="main.ecore#//InterfaceConnectorProvided"/>
+    <genClasses ecoreClass="main.ecore#//ServiceComponentRequired"/>
+    <genClasses ecoreClass="main.ecore#//PortComponentRequired"/>
+    <genClasses ecoreClass="main.ecore#//PortComponentProvided"/>
+    <genClasses ecoreClass="main.ecore#//RoleProvided"/>
+    <genClasses image="false" ecoreClass="main.ecore#//InterfaceConfigurationProvided"/>
+    <genClasses ecoreClass="main.ecore#//ServiceConfigurationRequired"/>
+    <genClasses ecoreClass="main.ecore#//PortConfigurationProvided"/>
+    <genClasses ecoreClass="main.ecore#//ServiceConfigurationProvided"/>
+    <genClasses ecoreClass="main.ecore#//BindingProvided">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//BindingProvided/portComponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//BindingProvided/portConfiguration"/>
+    </genClasses>
+    <genClasses ecoreClass="main.ecore#//AttachmentPToR">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//AttachmentPToR/portcomponent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference main.ecore#//AttachmentPToR/rolerequired"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>
