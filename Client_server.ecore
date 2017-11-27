@@ -4,15 +4,29 @@
   <eClassifiers xsi:type="ecore:EClass" name="Client" eSuperTypes="model/main.ecore#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="model/main.ecore#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectionManager" eSuperTypes="model/main.ecore#//Component"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ServerConfig" eSuperTypes="model/main.ecore#//Configuration">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="neweclass10" eType="#//NewEClass10"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ServerConfig" eSuperTypes="model/main.ecore#//Configuration"/>
   <eClassifiers xsi:type="ecore:EClass" name="SecurityManager" eSuperTypes="model/main.ecore#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="Database" eSuperTypes="model/main.ecore#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="ClientConfig" eSuperTypes="model/main.ecore#//Configuration"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RPC" eSuperTypes="model/main.ecore#//Connector">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="gluerpc" eType="#//GlueRPC"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="GlueRPC" eSuperTypes="model/main.ecore#//Glue"/>
-  <eClassifiers xsi:type="ecore:EClass" name="NewEClass10"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectorCMD" eSuperTypes="model/main.ecore#//Connector"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GlueCMtoD" eSuperTypes="model/main.ecore#//Glue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GlueDtoCM" eSuperTypes="model/main.ecore#//Glue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoCM_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoCM_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueCMtoD_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueCMtoD_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectorCMSM" eSuperTypes="model/main.ecore#//Connector"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GlueCMtoSM" eSuperTypes="model/main.ecore#//Glue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GlueSMtoCM" eSuperTypes="model/main.ecore#//Glue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueCMtoSM_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueCMtoSM_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueSMtoCM_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueSMtoCM_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectorSMD" eSuperTypes="model/main.ecore#//Connector"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GlueSMtoD" eSuperTypes="model/main.ecore#//Glue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="GlueDtoSM" eSuperTypes="model/main.ecore#//Glue"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueSMtoD_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueSMtoD_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoSM_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoSM_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
 </ecore:EPackage>
