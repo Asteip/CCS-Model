@@ -3,18 +3,46 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="">
   <eClassifiers xsi:type="ecore:EClass" name="Client" eSuperTypes="model/main.ecore#//Component"/>
   <eClassifiers xsi:type="ecore:EClass" name="Server" eSuperTypes="model/main.ecore#//Component"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConnectionManager" eSuperTypes="model/main.ecore#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectionManager" eSuperTypes="model/main.ecore#//Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtod_p" lowerBound="1"
+        eType="#//PortCMToD_P" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portdtocm_r" lowerBound="1"
+        eType="#//PortDToCM_R" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServerConfig" eSuperTypes="model/main.ecore#//Configuration"/>
   <eClassifiers xsi:type="ecore:EClass" name="SecurityManager" eSuperTypes="model/main.ecore#//Component"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Database" eSuperTypes="model/main.ecore#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Database" eSuperTypes="model/main.ecore#//Component">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtod_r" lowerBound="1"
+        eType="#//PortCMToD_R" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portdtocm_p" lowerBound="1"
+        eType="#//PortDToCM_P" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ClientConfig" eSuperTypes="model/main.ecore#//Configuration"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConnectorCMD" eSuperTypes="model/main.ecore#//Connector"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GlueCMtoD" eSuperTypes="model/main.ecore#//Glue"/>
-  <eClassifiers xsi:type="ecore:EClass" name="GlueDtoCM" eSuperTypes="model/main.ecore#//Glue"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoCM_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
-  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoCM_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectorCMD" eSuperTypes="model/main.ecore#//Connector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gluedtocm" lowerBound="1"
+        eType="#//GlueCMtoD" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gluecmtod" lowerBound="1"
+        eType="#//GlueDtoCM" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GlueDtoCM" eSuperTypes="model/main.ecore#//Glue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolegluedtocm_r" lowerBound="1"
+        eType="#//RoleGlueDtoCM_R" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolegluedtocm_p" lowerBound="1"
+        eType="#//RoleGlueDtoCM_P" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GlueCMtoD" eSuperTypes="model/main.ecore#//Glue">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolegluecmtod_r" lowerBound="1"
+        eType="#//RoleGlueCMtoD_R" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolegluecmtod_p" lowerBound="1"
+        eType="#//RoleGlueCMtoD_P" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoleGlueCMtoD_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoleGlueCMtoD_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoCM_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoCM_P" eSuperTypes="model/main.ecore#//RoleProvided">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_dtocm" lowerBound="1"
+        eType="#//AttachmentRToP_DToCM" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectorCMSM" eSuperTypes="model/main.ecore#//Connector"/>
   <eClassifiers xsi:type="ecore:EClass" name="GlueCMtoSM" eSuperTypes="model/main.ecore#//Glue"/>
   <eClassifiers xsi:type="ecore:EClass" name="GlueSMtoCM" eSuperTypes="model/main.ecore#//Glue"/>
@@ -29,4 +57,34 @@
   <eClassifiers xsi:type="ecore:EClass" name="RoleGlueSMtoD_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoSM_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoSM_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortDToCM_R" eSuperTypes="model/main.ecore#//PortComponentRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCMToD_P" eSuperTypes="model/main.ecore#//PortComponentProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentRToP_DToCM" eSuperTypes="model/main.ecore#//AttachmentRToP">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portdtocm_r" lowerBound="1"
+        eType="#//PortDToCM_R" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentPToR_CMToD" eSuperTypes="model/main.ecore#//AttachmentPToR">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtod_p" lowerBound="1"
+        eType="#//PortCMToD_P" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolegluecmtod_r" lowerBound="1"
+        eType="#//RoleGlueCMtoD_R" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortDToCM_P" eSuperTypes="model/main.ecore#//PortComponentProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentPToR_DToCM" eSuperTypes="model/main.ecore#//AttachmentPToR">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portdtocm_p" lowerBound="1"
+        eType="#//PortDToCM_P" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolegluedtocm_r" lowerBound="1"
+        eType="#//RoleGlueDtoCM_R" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCMToD_R" eSuperTypes="model/main.ecore#//PortComponentRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentRToP_CMToD" eSuperTypes="model/main.ecore#//AttachmentRToP">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtod_r" lowerBound="1"
+        eType="#//PortCMToD_R" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rolegluecmtod_p" lowerBound="1"
+        eType="#//RoleGlueCMtoD_P" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass37"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass38"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass39"/>
+  <eClassifiers xsi:type="ecore:EClass" name="NewEClass40"/>
 </ecore:EPackage>
