@@ -49,7 +49,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="RoleGlueCMtoD_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoCM_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoleGlueDtoCM_P" eSuperTypes="model/main.ecore#//RoleProvided"/>
-  <eClassifiers xsi:type="ecore:EClass" name="ConnectorCMSM" eSuperTypes="model/main.ecore#//Connector"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ConnectorCMSM" eSuperTypes="model/main.ecore#//Connector">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gluecmtosm" lowerBound="1"
+        eType="#//GlueCMtoSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gluesmtocm" lowerBound="1"
+        eType="#//GlueSMtoCM" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GlueCMtoSM" eSuperTypes="model/main.ecore#//Glue"/>
   <eClassifiers xsi:type="ecore:EClass" name="GlueSMtoCM" eSuperTypes="model/main.ecore#//Glue"/>
   <eClassifiers xsi:type="ecore:EClass" name="RoleGlueCMtoSM_R" eSuperTypes="model/main.ecore#//RoleRequired"/>
@@ -134,4 +139,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="rolegluesmtod_r" lowerBound="1"
         eType="#//RoleGlueSMtoD_R" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCMToSM_P" eSuperTypes="model/main.ecore#//PortComponentProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortSMToCM_R" eSuperTypes="model/main.ecore#//PortComponentRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentPtoR_CMtoSM" eSuperTypes="model/main.ecore#//AttachmentPToR"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentRtoP_SMtoCM" eSuperTypes="model/main.ecore#//AttachmentRToP"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentPtoR_SMtoCM" eSuperTypes="model/main.ecore#//AttachmentPToR"/>
+  <eClassifiers xsi:type="ecore:EClass" name="AttachmentRtoP_CMtoSM" eSuperTypes="model/main.ecore#//AttachmentRToP"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCMToSM_R" eSuperTypes="model/main.ecore#//PortComponentRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortSMToCM_P" eSuperTypes="model/main.ecore#//PortComponentProvided"/>
 </ecore:EPackage>
