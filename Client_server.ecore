@@ -26,6 +26,8 @@
         eType="#//PortCMToSM_P" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portcmserverconfig_p" lowerBound="1"
         eType="#//PortCMServerConfig_P" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmserverconfig_r" lowerBound="1"
+        eType="#//PortCMServerConfig_R" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServerConfig" eSuperTypes="model/main.ecore#//Configuration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="connectorcmsm" lowerBound="1"
@@ -68,6 +70,10 @@
         eType="#//PortServerConfig_P" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="bindingcm_server" lowerBound="1"
         eType="#//BindingCM_Server" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portserverconfig_r" lowerBound="1"
+        eType="#//PortServerConfig_R" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingserver_cm" lowerBound="1"
+        eType="#//BindingServer_CM" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SecurityManager" eSuperTypes="model/main.ecore#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portdtosm_r" lowerBound="1"
@@ -313,4 +319,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PortServerConfig_P" eSuperTypes="model/main.ecore#//PortConfigurationProvided"/>
   <eClassifiers xsi:type="ecore:EClass" name="PortCMServerConfig_P" eSuperTypes="model/main.ecore#//PortComponentProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingServer_CM" eSuperTypes="model/main.ecore#//BindingRequired">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmserverconfig_r" lowerBound="1"
+        eType="#//PortCMServerConfig_R" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portserverconfig_r" lowerBound="1"
+        eType="#//PortServerConfig_R" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCMServerConfig_R" eSuperTypes="model/main.ecore#//PortConfigurationRequired"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortServerConfig_R" eSuperTypes="model/main.ecore#//InterfaceConfigurationRequired"/>
 </ecore:EPackage>
