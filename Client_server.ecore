@@ -13,7 +13,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="portstoc_p" lowerBound="1"
         eType="#//PortStoC_P" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="serverconfig" lowerBound="1"
-        eType="#//ServerConfig" containment="true"/>
+        eType="#//ServerConfig"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectionManager" eSuperTypes="model/main.ecore#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtod_p" lowerBound="1"
