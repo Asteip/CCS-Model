@@ -23,7 +23,44 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtosm_p" lowerBound="1"
         eType="#//PortCMToSM_P" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ServerConfig" eSuperTypes="model/main.ecore#//Configuration"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ServerConfig" eSuperTypes="model/main.ecore#//Configuration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectorcmsm" lowerBound="1"
+        eType="#//ConnectorCMSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_cmtosm"
+        lowerBound="1" eType="#//AttachmentPtoR_CMtoSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_smtocm"
+        lowerBound="1" eType="#//AttachmentPtoR_SMtoCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_smtocm"
+        lowerBound="1" eType="#//AttachmentRtoP_SMtoCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_cmtosm"
+        lowerBound="1" eType="#//AttachmentRtoP_CMtoSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectionmanager" lowerBound="1"
+        eType="#//ConnectionManager" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_cmtod" lowerBound="1"
+        eType="#//AttachmentPToR_CMToD" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_dtocm" lowerBound="1"
+        eType="#//AttachmentRToP_DToCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="securitymanager" lowerBound="1"
+        eType="#//SecurityManager" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_dtosm" lowerBound="1"
+        eType="#//AttachmentRToP_DToSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_smtod" lowerBound="1"
+        eType="#//AttachmentPToR_SMToD" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectorcmd" lowerBound="1"
+        eType="#//ConnectorCMD" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectorsmd" lowerBound="1"
+        eType="#//ConnectorSMD" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="database" lowerBound="1"
+        eType="#//Database" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_cmtod" lowerBound="1"
+        eType="#//AttachmentRToP_CMToD" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_dtocm" lowerBound="1"
+        eType="#//AttachmentPToR_DToCM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_smtod" lowerBound="1"
+        eType="#//AttachmentRToP_SMToD" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_dtosm" lowerBound="1"
+        eType="#//AttachmentPToR_DToSM" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SecurityManager" eSuperTypes="model/main.ecore#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portdtosm_r" lowerBound="1"
         eType="#//PortDToSM_R" containment="true"/>
@@ -44,7 +81,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="portsmtod_r" lowerBound="1"
         eType="#//PortSMToD_R" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ClientConfig" eSuperTypes="model/main.ecore#//Configuration"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectorCMD" eSuperTypes="model/main.ecore#//Connector">
     <eStructuralFeatures xsi:type="ecore:EReference" name="gluedtocm" lowerBound="1"
         eType="#//GlueCMtoD" containment="true"/>
@@ -244,5 +280,21 @@
         eType="#//PortStoC_P" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="rolegluestoc_r" lowerBound="1"
         eType="#//RoleGlueStoC_R" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Config" eSuperTypes="model/main.ecore#//Configuration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connectorrpc" lowerBound="1"
+        eType="#//ConnectorRPC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" lowerBound="1"
+        eType="#//Client" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="server" lowerBound="1"
+        eType="#//Server" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_ctos" lowerBound="1"
+        eType="#//AttachmentPtoR_CtoS" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_stoc" lowerBound="1"
+        upperBound="-1" eType="#//AttachmentRtoP_StoC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_stoc" lowerBound="1"
+        eType="#//AttachmentPtoR_StoC" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_ctos" lowerBound="1"
+        eType="#//AttachmentRtoP_CtoS" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>
