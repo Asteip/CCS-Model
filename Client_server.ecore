@@ -12,6 +12,8 @@
         eType="#//PortCtoS_R" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portstoc_p" lowerBound="1"
         eType="#//PortStoC_P" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="serverconfig" lowerBound="1"
+        eType="#//ServerConfig" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConnectionManager" eSuperTypes="model/main.ecore#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtod_p" lowerBound="1"
@@ -22,6 +24,8 @@
         eType="#//PortSMToCM_R" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portcmtosm_p" lowerBound="1"
         eType="#//PortCMToSM_P" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmserverconfig_p" lowerBound="1"
+        eType="#//PortCMServerConfig_P" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ServerConfig" eSuperTypes="model/main.ecore#//Configuration">
     <eStructuralFeatures xsi:type="ecore:EReference" name="connectorcmsm" lowerBound="1"
@@ -60,6 +64,8 @@
         eType="#//AttachmentRToP_SMToD" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_dtosm" lowerBound="1"
         eType="#//AttachmentPToR_DToSM" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portserverconfig_p" lowerBound="1"
+        eType="#//PortServerConfig_P" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SecurityManager" eSuperTypes="model/main.ecore#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portdtosm_r" lowerBound="1"
@@ -297,4 +303,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_ctos" lowerBound="1"
         eType="#//AttachmentRtoP_CtoS" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BindingCM_Server" eSuperTypes="model/main.ecore#//BindingProvided">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portserverconfig_p" lowerBound="1"
+        eType="#//PortServerConfig_P" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="portcmserverconfig_p" lowerBound="1"
+        eType="#//PortCMServerConfig_P" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PortServerConfig_P" eSuperTypes="model/main.ecore#//PortConfigurationProvided"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PortCMServerConfig_P" eSuperTypes="model/main.ecore#//PortComponentProvided"/>
 </ecore:EPackage>
