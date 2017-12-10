@@ -66,6 +66,8 @@
         eType="#//AttachmentPToR_DToSM" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="portserverconfig_p" lowerBound="1"
         eType="#//PortServerConfig_P" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bindingcm_server" lowerBound="1"
+        eType="#//BindingCM_Server" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SecurityManager" eSuperTypes="model/main.ecore#//Component">
     <eStructuralFeatures xsi:type="ecore:EReference" name="portdtosm_r" lowerBound="1"
@@ -297,7 +299,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_ctos" lowerBound="1"
         eType="#//AttachmentPtoR_CtoS" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_stoc" lowerBound="1"
-        upperBound="-1" eType="#//AttachmentRtoP_StoC" containment="true"/>
+        eType="#//AttachmentRtoP_StoC" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentptor_stoc" lowerBound="1"
         eType="#//AttachmentPtoR_StoC" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attachmentrtop_ctos" lowerBound="1"
